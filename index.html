@@ -1,1 +1,106 @@
-<h1>Bar Celona</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="stylesheet" href="css/styles.css" type="text/css">
+	<link rel="stylesheet" href="fontawesome/all.min.css">
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+
+    <!-- Flickity -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <title>Bar Celona</title>
+</head>
+<body>
+    <nav>
+		<h1 id="title">Bar Celona</h1>
+		<div id="menu-button" onclick="switchMenu(this)">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
+
+		<div id="menu">
+			<ul>
+				<li><a href="#">Section 1</a></li>
+				<li><a href="#">Section 2</a></li>
+				<li><a href="#">Section 3</a></li>
+			</ul>
+		</div>
+    </nav>
+
+    <main>
+        <section id="about">
+            <img class="wide_img" src="images/restaurant.jpg">
+            <div class="container">
+                <h2>Lorem ipsum dolor sit amet</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id sollicitudin orci, sed sollicitudin neque. Nullam pulvinar, enim laoreet commodo fringilla, ipsum est luctus lectus, a congue nunc massa eget risus. Duis suscipit, quam sed pulvinar commodo, mi ipsum facilisis elit, ac facilisis ante magna in ligula.</p> 
+            </div>
+        </section>
+
+        <section id="food">
+            <div class="main-carousel" data-flickity='{ "contain": true, "autoPlay": true, "fullscreen": true, "fade": true, "imagesLoaded": true }'>
+                <div class="carousel-cell"><img class="wide_img" src="images/food (1).jpg"></div>
+                <div class="carousel-cell"><img class="wide_img" src="images/food (2).jpg"></div>
+                <div class="carousel-cell"><img class="wide_img" src="images/food (3).jpg"></div>
+                <div class="carousel-cell"><img class="wide_img" src="images/food (4).jpg"></div>
+            </div>
+            
+            <div class="container">
+                <h2>Lorem ipsum dolor sit amet</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id sollicitudin orci, sed sollicitudin neque. Nullam pulvinar, enim laoreet commodo fringilla, ipsum est luctus lectus, a congue nunc massa eget risus. Duis suscipit, quam sed pulvinar commodo, mi ipsum facilisis elit, ac facilisis ante magna in ligula.</p> 
+                <div class="center"><a id="menu_btn" href="#">Menu</a></div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <img class="wide_img" src="images/work.jpg">
+            <div class="container">
+                <h2>Lorem ipsum dolor sit amet</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id sollicitudin orci, sed sollicitudin neque.</p>
+                <ul>
+                    <li class="street"><i class="fas fa-map-marker-alt"></i>Carrer del Poeta Cabanyes, 30, 08004 Barcelona</li>
+                    <li class="phone"><i class="fas fa-phone"></i></i>934 42 30 62</li>
+                </ul> 
+            </div>
+            <div id="mapid"></div>
+        </section>
+
+        <footer>
+            
+        </footer>
+    </main>
+
+    <script>
+		var menu = document.getElementById("menu");
+
+		function switchMenu (btn) {
+			btn.classList.toggle("close");
+			menu.classList.toggle("visible");
+        }
+
+
+        // Leaflet map
+        var mymap = L.map('mapid').setView([41.3737, 2.1652], 16);
+
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox.streets',
+            accessToken: 'pk.eyJ1IjoicmV5bmF1IiwiYSI6ImNrMjBta3dpejE2aWUzY3FnZDlveDZ0YTgifQ.ORk5hXOs21Tj_gCN3YsfRA'
+        }).addTo(mymap);
+        var marker = L.marker([41.3737, 2.1652]).addTo(mymap);
+    </script>
+</body>
+</html>
