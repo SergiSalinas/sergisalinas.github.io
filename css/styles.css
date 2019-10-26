@@ -222,8 +222,8 @@ footer {
   display: -ms-grid;
   display: grid;
       grid-template-areas: "general" "copyright";
-  -ms-grid-rows: 150px auto;
-      grid-template-rows: 150px auto;
+  -ms-grid-rows: 100px auto;
+      grid-template-rows: 100px auto;
 }
 
 footer .footer_container {
@@ -235,18 +235,6 @@ footer .footer_container {
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
-}
-
-footer .footer_element {
-  text-align: center;
-  padding: 5px;
-  margin-bottom: 15px;
-}
-
-footer .footer_element i {
-  margin: 5px;
-  vertical-align: middle;
-  color: white;
 }
 
 footer a {
