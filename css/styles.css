@@ -219,17 +219,56 @@ main section .container {
 
 footer {
   background-color: #353535;
-  height: 150px;
   display: -ms-grid;
   display: grid;
+      grid-template-areas: "general" "copyright";
+  -ms-grid-rows: 150px auto;
+      grid-template-rows: 150px auto;
 }
 
 footer .footer_container {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: general;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
+}
+
+footer .footer_element {
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+footer .footer_element i {
+  margin: 5px;
+  vertical-align: middle;
+  color: white;
+}
+
+footer a {
+  color: white;
+}
+
+footer .copyright {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: copyright;
+  color: white;
+  background: #252525;
+  font-size: 12px;
+  text-align: center;
+}
+
+footer .copyright p {
+  margin: 15px;
+}
+
+footer .copyright a {
+  text-decoration: underline;
 }
 
 @media (min-width: 768px) {
