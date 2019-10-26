@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/styles.css" type="text/css">
 	<link rel="stylesheet" href="fontawesome/all.min.css">
 
-    <!-- Leaflet -->
+    <!-- Leaflet Map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
     crossorigin=""/>
@@ -16,7 +16,7 @@
     integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
     crossorigin=""></script>
 
-    <!-- Flickity -->
+    <!-- Flickity Carousel -->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
@@ -33,9 +33,9 @@
 
 		<div id="menu">
 			<ul>
-				<li><a href="#">Section 1</a></li>
-				<li><a href="#">Section 2</a></li>
-				<li><a href="#">Section 3</a></li>
+				<li><a href="#about">Bar Celona</a></li>
+				<li><a href="#food">El menú</a></li>
+				<li><a href="#contact">Dónde estamos</a></li>
 			</ul>
 		</div>
     </nav>
@@ -44,8 +44,8 @@
         <section id="about">
             <img class="wide_img" src="images/restaurant.jpg">
             <div class="container">
-                <h2>Lorem ipsum dolor sit amet</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id sollicitudin orci, sed sollicitudin neque. Nullam pulvinar, enim laoreet commodo fringilla, ipsum est luctus lectus, a congue nunc massa eget risus. Duis suscipit, quam sed pulvinar commodo, mi ipsum facilisis elit, ac facilisis ante magna in ligula.</p> 
+                <h2>Bar Celona</h2>
+                <p>En pleno centro de Barcelona, en el corazón de Poble Sec, abrimos por primera vez nuestras puertas en 1968, siendo uno de los primeros restaurantes en este emblemático barrio de la Ciudad Condal.  </p> 
             </div>
         </section>
 
@@ -58,21 +58,23 @@
             </div>
             
             <div class="container">
-                <h2>Lorem ipsum dolor sit amet</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id sollicitudin orci, sed sollicitudin neque. Nullam pulvinar, enim laoreet commodo fringilla, ipsum est luctus lectus, a congue nunc massa eget risus. Duis suscipit, quam sed pulvinar commodo, mi ipsum facilisis elit, ac facilisis ante magna in ligula.</p> 
-                <div class="center"><a id="menu_btn" href="#">Menu</a></div>
+                <h2>El menú de toda una vida</h2>
+                <p>En Bar Celona, mantenemos intacto nuestro estilo desde hace ya más de 50 años. Un espacio único, dónde rendimos homenaje a nuestra raíces y tradiciones familiares. Cocina de mercado y de toda una vida.
+                    Nuestro menú cambia todos los días, en función de la temporada y el producto. Aun así, ofrecemos a diario nuestros más tradicionales platos como la Ensaladilla Rusa de la Rafaela, el Bacalao en Sanfaina o una buena Crema Catalana.</p> 
+                <div class="center"><button id="menu_btn">El Menú</button></div>
             </div>
         </section>
 
         <section id="contact">
             <img class="wide_img" src="images/work.jpg">
             <div class="container">
-                <h2>Lorem ipsum dolor sit amet</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id sollicitudin orci, sed sollicitudin neque.</p>
+                <h2>Dónde estamos</h2>
                 <ul>
-                    <li class="street"><i class="fas fa-map-marker-alt"></i>Carrer del Poeta Cabanyes, 30, 08004 Barcelona</li>
-                    <li class="phone"><i class="fas fa-phone"></i></i>934 42 30 62</li>
-                </ul> 
+                    <li><i class="fas fa-map-marker-alt"></i>Carrer del Poeta Cabanyes, 30, 08004 Barcelona</li>
+                    <li><i class="fas fa-phone"></i>934 42 30 62</li>
+                    <li><i class="far fa-clock"></i>De Lunes a Sábado de 7h a 17h</li>
+                    <li><i class="fas fa-exclamation"></i>No admitimos reservas</li>
+                </ul>
             </div>
             <div id="mapid"></div>
         </section>
@@ -82,6 +84,54 @@
         </footer>
     </main>
 
+    <div id="menu_modal" class="modal">
+        <div class="modal_content">
+            <span class="close">&times;</span>
+            <h2>El Menú</h2>
+            <p>Éstos son sólo algunos de los platos que encontrarás en Bar Celona. De Lunes a Sábado, nuestro menú cambiará todos los días, siempre elaborados con las recetas de la familia y de la manera más tradicional.<br>
+                <br> 
+                ¡Así no tendrás excusa para no repetir!<br>
+                    <br>
+                    Para empezar:<br>
+                    <ul>
+                        <li>Ensaladilla Rusa</li>
+                        <li>Esqueixada de Bacallà</li>
+                        <li>Ensalada de la Casa</li>
+                        <li>Ensalada con Queso de Cabra y Frutos Secos</li>
+                        <li>Espinacas con bechamel</li>
+                        <li>Guisantes con jamón</li>
+                        <li>Canelones gratinados</li>
+                        <li>Paella marinera</li>
+                        <li>Fideuà con Alioli</li>
+                    </ul>
+                    
+                    Segundos:<br>
+                    <ul>
+                        <li>Cordero a la brasa </li>
+                        <li>Butifarra o Salchichas de Vic.</li>
+                        <li>Bistec</li>
+                        <li>Galta de cerdo rustida</li>
+                        <li>Pollo al horno</li>
+                        <li>Bacalao con Sanfaina o Pasas y Piñones</li>
+                        <li>Merluza a la plancha</li>
+                        <li>Calamares con Ajo y perejil</li>
+                    </ul>
+                    
+                    *Pidelos con guarnición de patatas, tomate o ensalada.
+                    <br><br>
+                    Y de postres: <br>
+                    <ul>
+                        <li>Crema Catalana</li>
+                        <li>Pastel de Queso de la Montse</li>
+                        <li>Flan con nata</li>
+                        <li>Puding de chocolate o de limón</li>
+                        <li>Panacota con Fresa</li>
+                        <li>Fruta del día</li>
+                    </ul>
+                    </p>
+        </div>
+    </div>
+
     <script>
 		var menu = document.getElementById("menu");
 
@@ -90,6 +140,23 @@
 			menu.classList.toggle("visible");
         }
 
+        var modal = document.getElementById("menu_modal");
+        var btn = document.getElementById("menu_btn");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
 
         // Leaflet map
         var mymap = L.map('mapid').setView([41.3737, 2.1652], 16);
