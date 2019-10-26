@@ -251,6 +251,7 @@ footer .footer_element i {
 
 footer a {
   color: white;
+  vertical-align: middle;
 }
 
 footer .copyright {
