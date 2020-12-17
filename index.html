@@ -15,6 +15,7 @@
     integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
     crossorigin=""></script>
 
+    <link rel="stylesheet" href="css/carousel.css">
     <!-- Flickity Carousel -->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
@@ -22,46 +23,62 @@
     <title>Bar Celona</title>
 </head>
 <body>
-    <nav>
-		<h1 id="title">Bar Celona</h1>
-		<div id="menu-button" onclick="switchMenu(this)">
-			<div class="bar1"></div>
-			<div class="bar2"></div>
-			<div class="bar3"></div>
-		</div>
+    <div class="navigation">
+        <nav>
+            <h1 id="title">Bar Celona</h1>
+            <div id="menu-button" onclick="switchMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
 
-		<div id="menu">
-			<ul>
-				<li><a href="#about">Bar Celona</a></li>
-				<li><a href="#food">El menú</a></li>
-				<li><a href="#contact">Dónde estamos</a></li>
-			</ul>
-		</div>
-    </nav>
+            <div id="menu">
+                <ul>
+                    <li><a href="#about">Restaurante</a></li>
+                    <li><a href="#food">Menú</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
     <main>
         <section id="about">
             <img class="desktop_img wide_img" src="images/desktop/restaurant.jpg">
             <img class="phone_img wide_img" src="images/phone/restaurant.jpg">
             <div class="container">
-                <h2>Nuestro restaurante</h2>
+                <!-- <h2>Nuestro restaurante</h2> -->
                 <p>En pleno centro de Barcelona, en el corazón de Poble Sec, abrimos por primera vez nuestras puertas en 1968, siendo uno de los primeros restaurantes en este emblemático barrio de la Ciudad Condal.  </p> 
             </div>
         </section>
 
         <section id="food">
-            <div class="main-carousel" data-flickity='{ "contain": true, "autoPlay": true, "fullscreen": true, "fade": true, "imagesLoaded": true }'>
-                <div class="carousel-cell"><img src="images/food (1).jpg"></div>
-                <div class="carousel-cell"><img src="images/food (2).jpg"></div>
-                <div class="carousel-cell"><img src="images/food (3).jpg"></div>
-                <div class="carousel-cell"><img src="images/food (4).jpg"></div>
-            </div>
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <img src="images/food (1).jpg" style="width:100%">
+                </div>
+              
+                <div class="mySlides fade">
+                    <img src="images/food (2).jpg" style="width:100%">
+                </div>
+              
+                <div class="mySlides fade">
+                    <img src="images/food (3).jpg" style="width:100%">
+                </div>
+              
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
             
             <div class="container">
-                <h2>El menú de toda una vida</h2>
-                <p>En Bar Celona, mantenemos intacto nuestro estilo desde hace ya más de 50 años. Un espacio único, dónde rendimos homenaje a nuestra raíces y tradiciones familiares. Cocina de mercado y de toda una vida.
-                    Nuestro menú cambia todos los días, en función de la temporada y el producto. Aun así, ofrecemos a diario nuestros más tradicionales platos como la Ensaladilla Rusa de la Rafaela, el Bacalao en Sanfaina o una buena Crema Catalana.</p> 
-                <div class="center"><button id="menu_btn">El Menú</button></div>
+                <!-- <h2>El menú de toda una vida</h2> -->
+                <p>Mantenemos intacto nuestro estilo desde hace ya más de 50 años. Un espacio único, dónde rendimos homenaje a nuestra raíces y tradiciones familiares.</p>
+                <br>
+                <p>Nuestro menú cambia todos los días, en función de la temporada y el producto. Aun así, ofrecemos a diario nuestros más tradicionales platos como la Ensaladilla Rusa de la Rafaela, el Bacalao en Sanfaina o una buena Crema Catalana.</p> 
+                <button id="menu_btn">El Menú</button>
             </div>
         </section>
 
@@ -69,72 +86,79 @@
             <img class="desktop_img wide_img" src="images/desktop/work.jpg">
             <img class="phone_img wide_img" src="images/phone/work.jpg">
             <div class="container">
-                <h2>Dónde estamos</h2>
-                <ul>
-                    <li><i class="fas fa-fw fa-map-marker-alt"></i>Carrer del Poeta Cabanyes, 30, 08004 Barcelona</li>
-                    <li><i class="fas fa-fw fa-phone"></i>934 42 30 62</li>
-                    <li><i class="far fa-fw fa-clock"></i>De Lunes a Sábado de 7h a 17h</li>
-                    <li><i class="fas fa-fw fa-exclamation"></i>No admitimos reservas</li>
-                </ul>
+                <div class="contact-line">
+                    <h2>Contacto</h2>
+                    <p>934 42 30 62</p>
+                </div>
+                <div class="contact-line">
+                    <h2>Dirección</h2>
+                    <p>Carrer del Poeta Cabanyes, 30, 08004 Barcelona</p>
+                    <a class="btn" href="https://www.google.es/maps/place/Carrer+del+Poeta+Cabanyes,+30,+08004+Barcelona" target="_blank">Cómo llegar</a>
+                </div>
+                <div class="contact-line">
+                    <h2>Horario</h2>
+                    <p>De Lunes a Sábado de 7h a 17h</p>
+                </div>
             </div>
-            <div id="mapid"></div>
         </section>
-
-        <footer>
-            <div class="footer_container">
-                <div id="TA_cdsratingsonlywide426" class="TA_cdsratingsonlywide"><ul id="7E7SkB" class="TA_links i6WcWk"><li id="6rce5o" class="CwMmCS"><a target="_blank" href="https://www.tripadvisor.es/"><img src="https://www.tripadvisor.es/img/cdsi/img2/branding/tripadvisor_logo_transp_340x80-18034-2.png" alt="TripAdvisor"/></a></li></ul></div><script async src="https://www.jscache.com/wejs?wtype=cdsratingsonlywide&amp;uniq=426&amp;locationId=3514966&amp;lang=es&amp;border=true&amp;shadow=false&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
-            </div>
-            <div class="copyright">
-                <p>© Copyright Bar Celona - 2019 | Diseño <a href="http://lopezreynau.me/" target="_blank">Xavier Lopez Reynau</a></p>
-            </div>
-        </footer>
     </main>
+
+    <footer>
+        <div class="footer_container">
+            <div id="TA_cdsratingsonlywide426" class="TA_cdsratingsonlywide"><ul id="7E7SkB" class="TA_links i6WcWk"><li id="6rce5o" class="CwMmCS"><a target="_blank" href="https://www.tripadvisor.es/"><img src="https://www.tripadvisor.es/img/cdsi/img2/branding/tripadvisor_logo_transp_340x80-18034-2.png" alt="TripAdvisor"/></a></li></ul></div><script async src="https://www.jscache.com/wejs?wtype=cdsratingsonlywide&amp;uniq=426&amp;locationId=3514966&amp;lang=es&amp;border=true&amp;shadow=false&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
+        </div>
+        <div class="copyright">
+            <p>© Copyright Bar Celona - 2019 | Diseño <a href="http://lopezreynau.me/" target="_blank">Xavier Lopez Reynau</a></p>
+        </div>
+    </footer>
 
     <div id="menu_modal" class="modal">
         <div class="modal_content">
             <span class="close">&times;</span>
             <h2>El Menú</h2>
-            <p>Éstos son sólo algunos de los platos que encontrarás en Bar Celona. De Lunes a Sábado, nuestro menú cambiará todos los días, siempre elaborados con las recetas de la familia y de la manera más tradicional.<br>
-                <br> 
-                ¡Así no tendrás excusa para no repetir!<br>
-                    <br>
-                    Para empezar:<br>
-                    <ul>
-                        <li>Ensaladilla Rusa</li>
-                        <li>Esqueixada de Bacallà</li>
-                        <li>Ensalada de la Casa</li>
-                        <li>Ensalada con Queso de Cabra y Frutos Secos</li>
-                        <li>Espinacas con bechamel</li>
-                        <li>Guisantes con jamón</li>
-                        <li>Canelones gratinados</li>
-                        <li>Paella marinera</li>
-                        <li>Fideuà con Alioli</li>
-                    </ul>
-                    
-                    Segundos:<br>
-                    <ul>
-                        <li>Cordero a la brasa </li>
-                        <li>Butifarra o Salchichas de Vic.</li>
-                        <li>Bistec</li>
-                        <li>Galta de cerdo rustida</li>
-                        <li>Pollo al horno</li>
-                        <li>Bacalao con Sanfaina o Pasas y Piñones</li>
-                        <li>Merluza a la plancha</li>
-                        <li>Calamares con Ajo y perejil</li>
-                    </ul>
-                    
-                    *Pidelos con guarnición de patatas, tomate o ensalada.
-                    <br><br>
-                    Y de postres: <br>
-                    <ul>
-                        <li>Crema Catalana</li>
-                        <li>Pastel de Queso de la Montse</li>
-                        <li>Flan con nata</li>
-                        <li>Puding de chocolate o de limón</li>
-                        <li>Panacota con Fresa</li>
-                        <li>Fruta del día</li>
-                    </ul>
-                    </p>
+            <br>
+            Éstos son sólo algunos de los platos que encontrarás en Bar Celona.
+            <br>
+            De Lunes a Sábado, nuestro menú cambiará todos los días, siempre elaborados con las recetas de la familia y de la manera más tradicional.
+            <br> 
+            ¡Así no tendrás excusa para no repetir!<br>
+                <br>
+                <b>Para empezar:</b><br>
+                <ul>
+                    <li>Ensaladilla Rusa</li>
+                    <li>Esqueixada de Bacallà</li>
+                    <li>Ensalada de la Casa</li>
+                    <li>Ensalada con Queso de Cabra y Frutos Secos</li>
+                    <li>Espinacas con bechamel</li>
+                    <li>Guisantes con jamón</li>
+                    <li>Canelones gratinados</li>
+                    <li>Paella marinera</li>
+                    <li>Fideuà con Alioli</li>
+                </ul>
+                
+                <b>Segundos:</b><br>
+                <ul>
+                    <li>Cordero a la brasa </li>
+                    <li>Butifarra o Salchichas de Vic.</li>
+                    <li>Bistec</li>
+                    <li>Galta de cerdo rustida</li>
+                    <li>Pollo al horno</li>
+                    <li>Bacalao con Sanfaina o Pasas y Piñones</li>
+                    <li>Merluza a la plancha</li>
+                    <li>Calamares con Ajo y perejil</li>
+                </ul>
+                
+                *Pidelos con guarnición de patatas, tomate o ensalada.
+                <br><br>
+                <b>Y de postres:</b><br>
+                <ul>
+                    <li>Crema Catalana</li>
+                    <li>Pastel de Queso de la Montse</li>
+                    <li>Flan con nata</li>
+                    <li>Puding de chocolate o de limón</li>
+                    <li>Panacota con Fresa</li>
+                    <li>Fruta del día</li>
+                </ul>
         </div>
     </div>
 
@@ -163,17 +187,7 @@
                 modal.style.display = "none";
             }
         }
-
-        // Leaflet map
-        var mymap = L.map('mapid').setView([41.3737, 2.1652], 16);
-
-        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-            maxZoom: 18,
-            id: 'mapbox.streets',
-            accessToken: 'pk.eyJ1IjoicmV5bmF1IiwiYSI6ImNrMjBta3dpejE2aWUzY3FnZDlveDZ0YTgifQ.ORk5hXOs21Tj_gCN3YsfRA'
-        }).addTo(mymap);
-        var marker = L.marker([41.3737, 2.1652]).addTo(mymap);
     </script>
+    <script src="js/carousel.js"></script>
 </body>
 </html>
