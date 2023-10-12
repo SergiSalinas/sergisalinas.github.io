@@ -1,193 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-	<link rel="stylesheet" href="css/styles.css" type="text/css">
-	<script src="https://kit.fontawesome.com/344e1f6faf.js" crossorigin="anonymous"></script>
-    <!-- Leaflet Map -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
-    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-    crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-    crossorigin=""></script>
-
-    <link rel="stylesheet" href="css/carousel.css">
-    <!-- Flickity Carousel -->
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <link rel="stylesheet" href="css/index.css" type="text/css" />
 
     <title>Bar Celona</title>
-</head>
-<body>
-    <div class="navigation">
-        <nav>
-            <h1 id="title">Bar Celona</h1>
-            <div id="menu-button" onclick="switchMenu(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </div>
-
-            <div id="menu">
-                <ul>
-                    <li><a href="#about">Restaurante</a></li>
-                    <li><a href="#food">Menú</a></li>
-                    <li><a href="#contact">Contacto</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+  </head>
+  <body>
+    <nav>
+      <h1>Bar Celona</h1>
+    </nav>
 
     <main>
-        <section id="about">
-            <img class="desktop_img wide_img" src="images/desktop/restaurant.jpg">
-            <img class="phone_img wide_img" src="images/phone/restaurant.jpg">
-            <div class="container">
-                <!-- <h2>Nuestro restaurante</h2> -->
-                <p>En pleno centro de Barcelona, en el corazón de Poble Sec, abrimos por primera vez nuestras puertas en 1968, siendo uno de los primeros restaurantes en este emblemático barrio de la Ciudad Condal.  </p> 
-            </div>
-        </section>
+      <section id="hero">
+        <h2>COMIDA CASERA EN PLENO CENTRO DE BARCELONA</h2>
+        <div>
+          <p>
+            En pleno centro de Barcelona, en el corazón de Poble Sec, abrimos
+            por primera vez nuestras puertas en 1968, siendo uno de los primeros
+            restaurantes en este emblemático barrio de la Ciudad Condal.
+          </p>
+          <a href="https://maps.app.goo.gl/25e4rQatfQpqzCodA"  target="_blank" class="cta">LOCALÍZANOS</a>
+        </div>
+      </section>
 
-        <section id="food">
-            <div class="slideshow-container">
+      <section id="restaurante">
+        <img src="images/desktop/restaurant.jpg" style="width: 100%" />
+      </section>
 
-                <!-- Full-width images with number and caption text -->
-                <div class="mySlides fade">
-                    <img src="images/food (1).jpg" style="width:100%">
-                </div>
-              
-                <div class="mySlides fade">
-                    <img src="images/food (2).jpg" style="width:100%">
-                </div>
-              
-                <div class="mySlides fade">
-                    <img src="images/food (3).jpg" style="width:100%">
-                </div>
-              
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-              </div>
-            
-            <div class="container">
-                <!-- <h2>El menú de toda una vida</h2> -->
-                <p>Mantenemos intacto nuestro estilo desde hace ya más de 50 años. Un espacio único, dónde rendimos homenaje a nuestra raíces y tradiciones familiares.</p>
-                <br>
-                <p>Nuestro menú cambia todos los días, en función de la temporada y el producto. Aun así, ofrecemos a diario nuestros más tradicionales platos como la Ensaladilla Rusa de la Rafaela, el Bacalao en Sanfaina o una buena Crema Catalana.</p> 
-                <button id="menu_btn">El Menú</button>
-            </div>
-        </section>
+      <section id="description">
+        <img src="images/food.jpg" />
+        <div>
+          <h3>NUESTRO MENÚ DE SIEMPRE</h3>
+          <p>
+            Mantenemos intacto nuestro estilo desde hace ya más de 50 años. Un
+            espacio único, dónde rendimos homenaje a nuestra raíces y
+            tradiciones familiares.
+          </p>
+          <p>
+            Nuestro menú cambia todos los días, en función de la temporada y el
+            producto. Aun así, ofrecemos a diario nuestros más tradicionales
+            platos como la Ensaladilla Rusa de la Rafaela, el Bacalao en
+            Sanfaina o una buena Crema Catalana.
+          </p>
+        </div>
+      </section>
 
-        <section id="contact">
-            <img class="desktop_img wide_img" src="images/desktop/work.jpg">
-            <img class="phone_img wide_img" src="images/phone/work.jpg">
-            <div class="container">
-                <div class="contact-line">
-                    <h2>Contacto</h2>
-                    <p>934 42 30 62</p>
-                </div>
-                <div class="contact-line">
-                    <h2>Dirección</h2>
-                    <p>Carrer del Poeta Cabanyes, 30, 08004 Barcelona</p>
-                    <a class="btn" href="https://www.google.es/maps/place/Carrer+del+Poeta+Cabanyes,+30,+08004+Barcelona" target="_blank">Cómo llegar</a>
-                </div>
-                <div class="contact-line">
-                    <h2>Horario</h2>
-                    <p>De Lunes a Sábado de 7h a 17h</p>
-                </div>
-            </div>
-        </section>
+      <section id="menu">
+        <h3>ENTRANTES</h3>
+        <ul>
+          <li>Ensaladilla rusa</li>
+          <li>Esqueixada de bacallà</li>
+          <li>Ensalada de la casa</li>
+          <li>Ensalada con queso de cabra y frutos secos</li>
+          <li>Espinacas con bechamel</li>
+          <li>Guisantes con jamón</li>
+          <li>Canelones gratinados</li>
+          <li>Paella marinera</li>
+          <li>Fideuà con alioli</li>
+        </ul>
+
+        <h3>SEGUNDOS</h3>
+        <small>(Pídelos con guarnición de patatas, tomate o ensalada)</small>
+        <ul>
+          <li>Cordero a la brasa</li>
+          <li>Butifarra o salchichas de Vic</li>
+          <li>Bistec</li>
+          <li>Galta de cerdo rustida</li>
+          <li>Pollo al horno</li>
+          <li>Bacalao con sanfaina o pasas y piñones</li>
+          <li>Merluza a la plancha</li>
+          <li>Calamares con ajo y perejil</li>
+        </ul>
+
+        <h3>POSTRES</h3>
+        <ul>
+          <li>Crema catalana</li>
+          <li>Pastel de queso de la Montse</li>
+          <li>Flan con nata</li>
+          <li>Puding de chocolate o de limón</li>
+          <li>Panacota con fresa</li>
+          <li>Fruta del día</li>
+        </ul>
+      </section>
     </main>
-
     <footer>
+      <div class="left">
+        <ul>
+          <li>
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.9998 28.0001C14.3157 26.5636 12.7548 24.9888 11.3332 23.2921C9.19984 20.7441 6.66651 16.9494 6.66651 13.3334C6.66461 9.5568 8.93883 6.15125 12.4279 4.70593C15.917 3.26061 19.9333 4.06039 22.6025 6.73207C24.3578 8.47954 25.3411 10.8566 25.3332 13.3334C25.3332 16.9494 22.7998 20.7441 20.6665 23.2921C19.2449 24.9888 17.6839 26.5636 15.9998 28.0001ZM15.9998 9.3334C14.5708 9.3334 13.2503 10.0958 12.5357 11.3334C11.8212 12.571 11.8212 14.0958 12.5357 15.3334C13.2503 16.571 14.5708 17.3334 15.9998 17.3334C18.209 17.3334 19.9998 15.5425 19.9998 13.3334C19.9998 11.1243 18.209 9.3334 15.9998 9.3334Z" fill="black"/>
+            </svg>
+            <p>Carrer del Poeta Cabanyes, 30, 08004 Barcelona</p>
+          </li>
+          <li>
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M25.3301 26.6666C13.9547 26.6827 5.32134 17.9459 5.33351 6.66993C5.33351 5.93355 5.93046 5.33325 6.66684 5.33325H10.186C10.8467 5.33325 11.4081 5.81876 11.5051 6.47236C11.7376 8.03885 12.1937 9.56388 12.8595 11.0009L12.9965 11.2966C13.187 11.7078 13.0579 12.1964 12.6891 12.4597C11.5992 13.238 11.1827 14.8047 12.0318 16.0271C13.0972 17.561 14.4402 18.9038 15.9739 19.9687C17.1962 20.8175 18.7626 20.4011 19.5408 19.3114C19.8044 18.9425 20.2932 18.8133 20.7047 19.0038L20.9991 19.1402C22.4361 19.8059 23.9613 20.262 25.5279 20.4945C26.1816 20.5915 26.6668 21.1528 26.6668 21.8136V25.3332C26.6668 26.0696 26.0684 26.6666 25.332 26.6666L25.3301 26.6666Z" fill="black"/>
+            </svg>
+            <p>934 42 30 62</p>
+          </li>
+          <li>
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M25.3333 29.3334H6.66667C5.19391 29.3334 4 28.1395 4 26.6667V8.00008C4 6.52732 5.19391 5.33341 6.66667 5.33341H9.33333V2.66675H12V5.33341H20V2.66675H22.6667V5.33341H25.3333C26.8061 5.33341 28 6.52732 28 8.00008V26.6667C28 28.1395 26.8061 29.3334 25.3333 29.3334ZM6.66667 13.3334V26.6667H25.3333V13.3334H6.66667ZM6.66667 8.00008V10.6667H25.3333V8.00008H6.66667ZM22.6667 24.0001H20V21.3334H22.6667V24.0001ZM17.3333 24.0001H14.6667V21.3334H17.3333V24.0001ZM12 24.0001H9.33333V21.3334H12V24.0001ZM22.6667 18.6667H20V16.0001H22.6667V18.6667ZM17.3333 18.6667H14.6667V16.0001H17.3333V18.6667ZM12 18.6667H9.33333V16.0001H12V18.6667Z" fill="black"/>
+            </svg>
+            <p>De Lunes a Sábado de 7h a 17h</p>
+          </li>
+        </ul>
+      </div>
+      <div class="right">
         <div class="footer_container">
             <div id="TA_cdsratingsonlywide426" class="TA_cdsratingsonlywide"><ul id="7E7SkB" class="TA_links i6WcWk"><li id="6rce5o" class="CwMmCS"><a target="_blank" href="https://www.tripadvisor.es/"><img src="https://www.tripadvisor.es/img/cdsi/img2/branding/tripadvisor_logo_transp_340x80-18034-2.png" alt="TripAdvisor"/></a></li></ul></div><script async src="https://www.jscache.com/wejs?wtype=cdsratingsonlywide&amp;uniq=426&amp;locationId=3514966&amp;lang=es&amp;border=true&amp;shadow=false&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
         </div>
-        <div class="copyright">
-            <p>© Copyright Bar Celona - 2019 | Diseño <a href="http://lopezreynau.me/" target="_blank">Xavier Lopez Reynau</a></p>
+        <div>
+          <p>© Copyright Bar Celona - 2023</p>
+          <a href="http://lopezreynau.com/" target="_blank">Diseñado y desarrollado por Xavier Lopez Reynau</a>
         </div>
+      </div>
     </footer>
-
-    <div id="menu_modal" class="modal">
-        <div class="modal_content">
-            <span class="close">&times;</span>
-            <h2>El Menú</h2>
-            <br>
-            Éstos son sólo algunos de los platos que encontrarás en Bar Celona.
-            <br>
-            De Lunes a Sábado, nuestro menú cambiará todos los días, siempre elaborados con las recetas de la familia y de la manera más tradicional.
-            <br> 
-            ¡Así no tendrás excusa para no repetir!<br>
-                <br>
-                <b>Para empezar:</b><br>
-                <ul>
-                    <li>Ensaladilla Rusa</li>
-                    <li>Esqueixada de Bacallà</li>
-                    <li>Ensalada de la Casa</li>
-                    <li>Ensalada con Queso de Cabra y Frutos Secos</li>
-                    <li>Espinacas con bechamel</li>
-                    <li>Guisantes con jamón</li>
-                    <li>Canelones gratinados</li>
-                    <li>Paella marinera</li>
-                    <li>Fideuà con Alioli</li>
-                </ul>
-                
-                <b>Segundos:</b><br>
-                <ul>
-                    <li>Cordero a la brasa </li>
-                    <li>Butifarra o Salchichas de Vic.</li>
-                    <li>Bistec</li>
-                    <li>Galta de cerdo rustida</li>
-                    <li>Pollo al horno</li>
-                    <li>Bacalao con Sanfaina o Pasas y Piñones</li>
-                    <li>Merluza a la plancha</li>
-                    <li>Calamares con Ajo y perejil</li>
-                </ul>
-                
-                *Pidelos con guarnición de patatas, tomate o ensalada.
-                <br><br>
-                <b>Y de postres:</b><br>
-                <ul>
-                    <li>Crema Catalana</li>
-                    <li>Pastel de Queso de la Montse</li>
-                    <li>Flan con nata</li>
-                    <li>Puding de chocolate o de limón</li>
-                    <li>Panacota con Fresa</li>
-                    <li>Fruta del día</li>
-                </ul>
-        </div>
-    </div>
-
-    <script>
-		var menu = document.getElementById("menu");
-
-		function switchMenu (btn) {
-			btn.classList.toggle("close");
-			menu.classList.toggle("visible");
-        }
-
-        var modal = document.getElementById("menu_modal");
-        var btn = document.getElementById("menu_btn");
-        var span = document.getElementsByClassName("close")[0];
-
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
-    <script src="js/carousel.js"></script>
-</body>
+  </body>
 </html>

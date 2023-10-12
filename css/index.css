@@ -1,0 +1,229 @@
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/fonts/PlayfairDisplay-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('/fonts/Barlow-Black.ttf');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('/fonts/Barlow-Bold.ttf');
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 64px;
+  margin: 35px 0;
+  text-transform: uppercase;
+}
+
+section {
+  margin: 40px 0;
+}
+
+#hero {
+  display: flex;
+  gap: 20px;
+}
+
+#hero > h2 {
+  flex: 1;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 900;
+  font-size: 96px;
+  line-height: 0.9;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+#hero > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  gap: 20px;
+}
+
+#hero > div > p {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 24px;
+  margin: 0;
+  text-align: justify;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  padding: 15px 50px;
+  margin-right: auto;
+  font-family: 'Barlow', sans-serif;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+}
+
+#description {
+  display: flex;
+  gap: 40px;
+  margin: 150px 0;
+}
+
+#description > img {
+  flex: 1;
+  max-width: 60%;
+  object-fit: cover;
+}
+
+#description > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+#description > div > h3 {
+  font-family: 'Barlow', sans-serif;
+  font-weight: bold;
+  font-size: 48px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+#description > div > p {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 24px;
+  margin: 0;
+  text-align: justify;
+}
+
+#menu {
+  width: 100%;
+  border: solid 3px black;
+  padding: 50px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#menu > h3 {
+  font-family: 'Barlow', sans-serif;
+  font-weight: bold;
+  font-size: 48px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+#menu > ul {
+  margin: 30px 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+#menu > small {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: italic;
+}
+
+footer {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+footer > .left ul {
+  padding: 0;
+  list-style: none;
+}
+
+footer > .left li {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+footer > .left p {
+  margin: 0;
+}
+
+footer > .right {
+  text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 56px;
+  }
+
+  #hero {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  #hero > h2 {
+    font-size: 64px;
+    text-align: center;
+  }
+
+  .cta {
+    margin: 0 auto;
+  }
+
+  #restaurante > img {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  #description {
+    margin: 40px 0;
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+
+  #description > img {
+    max-width: 100%;
+    margin-top: 25px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+
+  footer .right {
+    text-align: center;
+  }
+
+  .footer_container {
+    max-width: 80%;
+  }
+}
